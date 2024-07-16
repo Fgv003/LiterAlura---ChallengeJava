@@ -1,25 +1,22 @@
 package com.alura.Challenge.model;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
+import java.util.List;
+
 public class Livro {
     private long id;
     private String titulo;
-    private Autor autor;
+    private Autor autores;
 
     public Livro(){}
 
-    public Livro(long id, String titulo, Autor autor) {
+    public Livro(long id, String titulo, Autor autores) {
         this.id = id;
         this.titulo = titulo;
-        this.autor = new Autor();
+        this.autores = new Autor();
     }
 
-    public Autor getAutor() {
-        return autor;
-    }
-
-    public void setAutor(Autor autor) {
-        this.autor = autor;
-    }
 
     public long getId() {
         return id;
@@ -41,6 +38,6 @@ public class Livro {
     public String toString() {
         return "id= " + id +
                 ", titulo= '" + titulo +
-                ", autor= " + autor;
+                ", autor= " + autores;
     }
 }

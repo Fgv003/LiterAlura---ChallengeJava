@@ -1,5 +1,9 @@
 package com.alura.Challenge.model;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Autor {
     private long id;
     private String nome;
